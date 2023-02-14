@@ -1,12 +1,10 @@
 def swap(user_list):
     for index in range(len(user_list)):
         for i in range(len(user_list)):
-            if user_list[index] > user_list[i]:
-                temp = 0
-                user_list[index] = temp
-                user_list[i] = user_list[index]
-                user_list[index] = temp
-
+            if user_list[index] < user_list[i]:
+                temp = user_list[index]
+                user_list[index] = user_list[i]
+                user_list[i] = temp
     return user_list
 
 
